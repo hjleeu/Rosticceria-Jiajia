@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class SpecificaOrdinazione extends Model
 {
-    protected $table = 'SpecificheOrdinazioni';
+    protected $table = 'specificheordinazioni';
     public $timestamps = false;
 }

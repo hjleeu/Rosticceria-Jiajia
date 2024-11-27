@@ -15,9 +15,9 @@
                     @if ($p->id_sezione == $s->id_sezione)
                     <div class="col">
                         <div class="card">
-                            <img class="card-img-top" src="{{ asset('foto_menu/' . 'prova' . '.jpg') }}" alt="{{ $p->prt_nome }}">
+                            <img class="card-img-top" src="{{ asset('foto_menu/' . $p->prt_nome . '.jpg') }}" alt="{{ $p->prt_nome }}">
                             <div class="card-body">
-                                <h5 class="card-title">@if ($p->id_sezione <= 5)
+                                <h5 class="card-title"  style="height: 3rem">@if ($p->id_sezione <= 5)
                                         {{ $p->prt_nome }}.
                                         @endif {{ $p->nome_prodotto }}</h5>
                                         <p class="card-text"><span>€ {{ number_format($p->prezzo_prodotto, 2) }}</span></p>
@@ -30,7 +30,7 @@
                                             <input type="text" class="form-control" name="n{{ $p->id_prodotto }}" id="n{{ $p->id_prodotto }}">
                                             <label for="n{{ $p->id_prodotto }}">Note</label>
                                         </div>
-                                        <input class="btn btn-primary" type="button" onclick="aggiungi('{{ $p->id_prodotto }}', '{{ $p->prt_nome }}', '{{ $p->prezzo_prodotto }}')" value="Aggiungi">
+                                        <input class="btn btn-primary w-100" type="button" onclick="aggiungi('{{ $p->id_prodotto }}', '{{ $p->prt_nome }}', '{{ $p->prezzo_prodotto }}')" value="Aggiungi">
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
         <span class="input-group-text">Nome</span>
         <input type="text" aria-label="Name" class="form-control" name="nome_cliente" required>
         <span class="input-group-text">Ora ritiro</span>
-        <input type="time" name="ora_ritiro" class="form-control" min="11:00" max="21:45">
+        <input type="time" name="ora_ritiro" class="form-control" min="11:00" max="22:00" required>
         <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Riepilogo</button>
         <ul class="dropdown-menu" id="riepilogo">
             <li><label class="dropdown-item">Totale: € <span id="totale">0.00</span></label></li>

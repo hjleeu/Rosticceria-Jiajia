@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sezione extends Model
 {
-    protected $table = 'Sezioni';
+    protected $table = 'sezioni';
     public $timestamps = false;
 }

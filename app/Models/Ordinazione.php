@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ordinazione extends Model
 {
-    protected $table = 'Ordinazioni';
+    protected $table = 'ordinazioni';
     public $timestamps = false;
 }
